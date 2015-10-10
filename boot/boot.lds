@@ -1,10 +1,10 @@
 SECTIONS
 {
-  . = 0x10000;
+  . = 0x10020;
 
   .text : {
     KEEP(*(.boot_head))
-    KEEP(*(.reset))
+    KEEP(*(.start))
     *(.text*)
   }
 }

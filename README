@@ -1,2 +1,12 @@
-Intial commit, with PIO sample code that needs to be tested to turn LED on using FEL utility.
+Experimentation with Allwinner A80 on Cubieboard4.
 
+toolchain:
+  Requires arm-none-eabi- toolchain.
+
+boot:
+  Contains start code, when built, can be prefixed with boot_head using mksunxiboot tool from sunxi-tools repo and run on Cubieboard4.
+  Turns on the Red LED.
+    sh ./build.sh
+    ../tools/bin/mksunxiboot boot.bin boot0.bin
+    dd if=boot0.bin of=<sdcard> bs=1k seek=8
+ 
